@@ -40,16 +40,16 @@ pip install -r requirements.txt
 
 ```bash
 # 启动完整监控（所有类型）
-python procmon.py
+python ProcDetective.py
 
 # 监控指定进程
-python procmon.py -p notepad.exe
+python ProcDetective.py -p notepad.exe
 
 # 只监控文件系统活动
-python procmon.py -t file
+python ProcDetective.py -t file
 
 # 启用详细监控模式
-python procmon.py --detailed
+python ProcDetective.py --detailed
 ```
 
 ### 命令行参数
@@ -71,27 +71,27 @@ python procmon.py --detailed
 
 #### 1. 监控特定进程的所有活动
 ```bash
-python procmon.py -p chrome.exe
+python ProcDetective.py -p chrome.exe
 ```
 
 #### 2. 只监控文件系统活动并保存到文件
 ```bash
-python procmon.py -t file -o filesystem_log.txt
+python ProcDetective.py -t file -o filesystem_log.txt
 ```
 
 #### 3. 监控特定目录的文件变化
 ```bash
-python procmon.py -t file --watch-path "C:\Users\YourName\Documents"
+python ProcDetective.py -t file --watch-path "C:\Users\YourName\Documents"
 ```
 
 #### 4. 监控网络活动（排除其他类型）
 ```bash
-python procmon.py --no-process --no-file --no-registry
+python ProcDetective.py --no-process --no-file --no-registry
 ```
 
 #### 5. 监控注册表变化
 ```bash
-python procmon.py -t registry --detailed
+python ProcDetective.py -t registry --detailed
 ```
 
 ## 输出格式
@@ -112,7 +112,7 @@ python procmon.py -t registry --detailed
 ## 模块说明
 
 ### 核心模块
-- `procmon.py`: 主程序和核心框架
+- `ProcDetective.py`: 主程序和核心框架
 - `process_monitor.py`: 进程监控实现
 - `filesystem_monitor.py`: 文件系统监控实现
 - `registry_monitor.py`: 注册表监控实现
