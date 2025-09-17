@@ -410,12 +410,12 @@ class EnhancedNetworkMonitor(BaseMonitor):
         """发送网络包事件"""
         try:
             # 确定操作类型
-            operation = Operation.NETWORK_RECEIVE
+            operation = Operation.NET_RECEIVE
             if packet.flags:
                 if "SYN" in packet.flags and "ACK" not in packet.flags:
-                    operation = Operation.NETWORK_CONNECT
+                    operation = Operation.NET_CONNECT
                 elif "FIN" in packet.flags or "RST" in packet.flags:
-                    operation = Operation.NETWORK_DISCONNECT
+                    operation = Operation.NET_DISCONNECT
             
             # 查找相关进程
             process_info = self._find_process_for_connection(
@@ -487,13 +487,13 @@ class EnhancedNetworkMonitor(BaseMonitor):
             for conn_key, conn in current_connections.items():
                 if conn_key not in self.connections:
                     # 新连接
-                    self._emit_connection_event(conn, Operation.NETWORK_CONNECT)
+                    self._emit_connection_event(conn, Operation.NET_CONNECT)
             
             # 检测断开的连接
             for conn_key, conn in self.connections.items():
                 if conn_key not in current_connections:
                     # 连接断开
-                    self._emit_connection_event(conn, Operation.NETWORK_DISCONNECT)
+                    self._emit_connection_event(conn, Operation.NET_DISCONNECT)
             
             # 更新连接状态
             self.connections = current_connections
@@ -586,7 +586,7 @@ class EnhancedNetworkMonitor(BaseMonitor):
     def _emit_listening_event(self, port_key: Tuple[str, int], port_info: dict, is_start: bool):
         """发送监听端口事件"""
         try:
-            operation = Operation.NETWORK_LISTEN if is_start else Operation.NETWORK_DISCONNECT
+            operation = Operation.NETWORK_LISTEN if is_start else Operation.NET_DISCONNECT
             
             event = MonitorEvent(
                 timestamp=datetime.now(),

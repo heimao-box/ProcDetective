@@ -380,8 +380,8 @@ class EventFormatter:
             'REG_DELETE': 'red',
             'REG_READ': 'blue',
             'REG_WRITE': 'magenta',
-            'NETWORK_CONNECT': 'cyan',
-            'NETWORK_DISCONNECT': 'magenta',
+            'NET_CONNECT': 'cyan',
+            'NET_DISCONNECT': 'magenta',
             'NET_SEND': 'blue',
             'NET_RECEIVE': 'green'
         }

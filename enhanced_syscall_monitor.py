@@ -129,7 +129,7 @@ class SyscallDetail:
         elif self.category == SyscallCategory.REGISTRY:
             return EventType.REGISTRY_ACCESS
         elif self.category == SyscallCategory.NETWORK:
-            return EventType.NETWORK_CONNECT
+            return EventType.NETWORK
         else:
             return EventType.SYSCALL
     
