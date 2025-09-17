@@ -73,7 +73,7 @@ python procmon.py --detailed
 
 #### 1. 监控特定进程的所有活动
 ```bash
-python procmon.py -p chrome.exe --detailed
+python procmon.py -p chrome.exe
 ```
 
 #### 2. 只监控文件系统活动并保存到文件
@@ -107,13 +107,8 @@ python procmon.py -t registry --detailed
 - **结果**: 操作结果（SUCCESS/FAILED等）
 
 示例输出：
-```
-Time            Process Name    PID     Operation       Path                    Result
---------------------------------------------------------------------------------------------------------
-14:30:25.123    notepad.exe     1234    FileRead        C:\temp\test.txt        SUCCESS
-14:30:25.456    chrome.exe      5678    NetConnect      TCP 192.168.1.100:443  SUCCESS
-14:30:25.789    explorer.exe    9012    RegRead         HKEY_CURRENT_USER\...   SUCCESS
-```
+![Uploading image.png…]()
+
 
 ## 模块说明
 
