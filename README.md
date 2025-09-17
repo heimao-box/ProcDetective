@@ -107,7 +107,8 @@ python procmon.py -t registry --detailed
 - **结果**: 操作结果（SUCCESS/FAILED等）
 
 示例输出：
-![Uploading image.png…]()
+
+<img width="2331" height="1254" alt="image" src="https://github.com/user-attachments/assets/2e84f706-187a-452c-ade6-e6826c54f6a1" />
 
 
 ## 模块说明
