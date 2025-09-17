@@ -1,4 +1,4 @@
-# ProcMonPy - Python版Process Monitor
+# ProcDetective
 
 一个功能强大的Python进程行为监控工具，类似于微软的Process Monitor，但提供了更多的自定义功能和编程接口。
 
