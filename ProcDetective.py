@@ -27,16 +27,16 @@ def print_banner():
     """打印程序横幅"""
     banner = """
 ╔══════════════════════════════════════════════════════════════╗
-║                      ProcDetective                          ║
-║                   进程行为侦探工具                           ║
+║                      ProcDetective                           ║
+║                   进程行为侦探工具                             ║
 ║                                                              ║
-║  功能特性:                                                   ║
-║  • 进程侦探 - 进程创建/退出、线程、模块加载                 ║
-║  • 文件系统侦探 - 文件读写、创建删除、权限变更               ║
-║  • 注册表侦探 - 注册表键值变化、进程注册表访问               ║
-║  • 网络侦探 - 网络连接、DNS查询、数据包捕获                 ║
-║  • 系统调用侦探 - 底层系统调用跟踪                          ║
-║  • 智能分析 - 多种过滤器、事件聚合、格式化输出               ║
+║  功能特性:                                                    ║
+║  • 进程侦探 - 进程创建/退出、线程、模块加载                      ║
+║  • 文件系统侦探 - 文件读写、创建删除、权限变更                   ║
+║  • 注册表侦探 - 注册表键值变化、进程注册表访问                   ║
+║  • 网络侦探 - 网络连接、DNS查询、数据包捕获                      ║
+║  • 系统调用侦探 - 底层系统调用跟踪                              ║
+║  • 智能分析 - 多种过滤器、事件聚合、格式化输出                   ║
 ╚══════════════════════════════════════════════════════════════╝
 """
     print(banner)
@@ -171,7 +171,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="ProcDetective - 进程行为侦探工具",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="更多信息请访问: https://github.com/your-repo/procdetective"
+        epilog="更多信息请访问: https://github.com/heimao-box/ProcDetective"
     )
     
     # 基本选项
