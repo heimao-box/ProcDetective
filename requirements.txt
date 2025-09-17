@@ -1,0 +1,40 @@
+# ProcDetective Dependencies
+# Third-party libraries required for Process Detective Tool
+
+# Core system monitoring libraries
+psutil>=5.9.0              # System and process information
+watchdog>=2.1.0            # File system monitoring
+
+# Windows-specific libraries
+pywin32>=304               # Windows API access
+wmi>=1.5.1                 # Windows Management Interface
+
+# Network monitoring
+scapy>=2.4.5               # Network packet capture and analysis (optional, requires admin privileges)
+netifaces>=0.11.0          # Network interface information
+
+# Data processing and storage
+numpy>=1.21.0              # Numerical computing
+pandas>=1.3.0              # Data analysis (optional)
+
+# Logging and configuration
+colorama>=0.4.4            # Colored terminal output
+pyyaml>=6.0                # YAML configuration file support (optional)
+
+# Performance optimization
+cython>=0.29.0             # Performance optimization (optional)
+
+# Development and testing
+pytest>=7.0.0              # Unit testing
+pytest-cov>=3.0.0          # Test coverage
+flake8>=4.0.0              # Code style checking
+black>=22.0.0              # Code formatting
+
+# Documentation generation
+sphinx>=4.0.0              # Documentation generation (optional)
+
+# Notes:
+# 1. scapy requires administrator privileges for network packet capture
+# 2. Some features may not be available on non-Windows systems
+# 3. It is recommended to install these dependencies in a virtual environment
+# 4. Installation command: pip install -r requirements.txt
